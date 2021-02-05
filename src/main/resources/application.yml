@@ -1,0 +1,3 @@
+apiConfiguration:
+  contentType: "application/json"
+  baseUri: "https://"
