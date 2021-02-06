@@ -1,4 +1,4 @@
-import config.ApiConfiguration;
+import config.ApiProperties;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,16 +8,16 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 
 @SpringBootTest
-@ContextConfiguration(classes = ApiConfiguration.class)
+@ContextConfiguration(classes = ApiProperties.class)
 @RunWith(SpringRunner.class)
 public class TestApplicationConfig {
 
     @Autowired
-    private ApiConfiguration apiConfiguration;
+    private ApiProperties apiProperties;
 
     @Test
     public void testConnection() {
-        System.out.println(apiConfiguration);
+        System.out.println(apiProperties);
     }
 }
 

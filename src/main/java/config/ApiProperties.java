@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ConfigurationProperties(prefix = "apiConfiguration")
 @Data
-public class ApiConfiguration {
+public class ApiProperties {
     private String contentType;
     private String baseUri;
 
