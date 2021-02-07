@@ -1,11 +1,9 @@
-package config;
+package com.mobiq.test.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = {
-        "model",
-        "service"})
-public class BaseConfiguration {
+@ComponentScan(basePackages = {"com.mobiq.test"})
+public class ApplicationConfiguration {
 }

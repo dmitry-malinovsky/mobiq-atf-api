@@ -1,13 +1,11 @@
-package config;
+package com.mobiq.test.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
-@ConfigurationProperties(prefix = "apiConfiguration")
+@ConfigurationProperties(prefix = "api-configuration")
 @Data
-public class ApiProperties {
+public class ApplicationProperties {
     private String contentType;
     private String baseUri;
 

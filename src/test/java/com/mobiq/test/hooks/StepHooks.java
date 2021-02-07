@@ -1,14 +1,16 @@
-package hooks;
+package com.mobiq.test.hooks;
 
-import context.ScenarioContext;
+import com.mobiq.test.context.ScenarioContext;
 import groovy.util.logging.Log4j;
+import io.cucumber.spring.CucumberContextConfiguration;
 import org.junit.Before;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
 @SpringBootTest
-@ContextConfiguration(classes = { TestConfig.class})
+@CucumberContextConfiguration
+@ContextConfiguration(classes = {TestConfig.class})
 @Log4j
 public class StepHooks {
 
@@ -16,7 +18,7 @@ public class StepHooks {
     private ScenarioContext scenarioContext;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         scenarioContext.resetContext();
     }
 }

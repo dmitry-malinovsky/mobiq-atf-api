@@ -1,13 +1,11 @@
-package context;
+package com.mobiq.test.context;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @Component
-@Primary
 public class ScenarioContext {
 
     private static final Map<Key, Object> data = new HashMap<Key, Object>();

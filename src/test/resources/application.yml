@@ -1,0 +1,3 @@
+api-configuration:
+  contentType: "application/json"
+  baseUri: "https://jsonplaceholder.typicode.com"

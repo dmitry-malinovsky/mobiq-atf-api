@@ -1,4 +1,4 @@
-package runner;
+package com.mobiq.test.runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -9,9 +9,8 @@ import org.junit.runner.RunWith;
         features = {
                 "src/test/resources/"},
         tags = "@Tag",
-        glue = {
-                "steps",
-                "hooks"},
+        glue = {"com.mobiq.test.hooks",
+                "com.mobiq.test.steps"},
         plugin = {
                 "json:target/cucumber.json", "pretty",
                 "html:target/cucumber-reports"})
