@@ -14,8 +14,8 @@ public class ScenarioContext {
         data.put(key, value);
     }
 
-    public void getData(Key key) {
-        data.get(key);
+    public Object getData(Key key) {
+       return data.get(key);
     }
 
     public void resetContext() {
