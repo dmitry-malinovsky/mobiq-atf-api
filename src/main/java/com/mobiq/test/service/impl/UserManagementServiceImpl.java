@@ -1,15 +1,16 @@
 package com.mobiq.test.service.impl;
 
 import com.mobiq.test.adapter.ApiAdapter;
-import com.mobiq.test.model.User;
+import com.mobiq.test.service.CommonApiService;
+import com.mobiq.test.service.UserManagementService;
 import io.restassured.response.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
-import com.mobiq.test.service.CommonApiService;
-import com.mobiq.test.service.UserManagementService;
 
-@Service
+/**
+ * Business oriented steps implementation oriented on Comments business domain
+ */
+
 @Component
 public class UserManagementServiceImpl extends CommonApiService implements UserManagementService {
 
@@ -25,7 +26,7 @@ public class UserManagementServiceImpl extends CommonApiService implements UserM
         return apiService.get(getBaseUri() + "/users/" + id);
     }
 
-    public Response getUserByUsername(String userName){
+    public Response getUserByUsername(String userName) {
         return apiService.get(getBaseUri() + "/users?username=" + userName);
     }
 }

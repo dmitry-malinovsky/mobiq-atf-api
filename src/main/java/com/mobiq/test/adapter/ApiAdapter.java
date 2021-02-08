@@ -8,6 +8,9 @@ import org.springframework.stereotype.Component;
 
 import static io.restassured.RestAssured.given;
 
+/**
+ * Wrapper class to be used for all API communication
+ */
 @Component
 @Log4j
 public class ApiAdapter {
