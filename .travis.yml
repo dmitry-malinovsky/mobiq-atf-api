@@ -1,1 +1,15 @@
 language: java
+
+script:
+  - ./gradlew check
+  - ./gradlew cucumber || echo "done"
+before_deploy:
+  - cp build/reports/cucumber/cucumber-html-reports/overview-features.html build/reports/cucumber/cucumber-html-reports/index.html
+deploy:
+  local_dir: build/reports/cucumber/cucumber-html-reports
+  provider: pages
+  skip_cleanup: true
+  github_token: 1b53bf5db62cea0cebc17607f0c9038e32dcd7fc
+  keep_history: true
+  on:
+    branch: master
