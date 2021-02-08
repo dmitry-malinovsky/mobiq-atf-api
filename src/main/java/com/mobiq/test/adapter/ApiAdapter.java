@@ -30,8 +30,15 @@ public class ApiAdapter {
         return prepareSpecification().delete(path);
     }
 
-    public Response put(String path){
-        return prepareSpecification().put(path);
+    public Response put(String path, String body){
+        log.info("Sending Put request to: " + path);
+        Response response = given().body(body)
+                .contentType(ContentType.JSON)
+                .when()
+                .post(path).then()
+                .extract().response();
+        log.info("Response code: " + response.getStatusCode());
+        return response;
     }
 
     private RequestSpecification prepareSpecification(){

@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {
                 "src/test/resources/"},
-        tags = "@Tag",
+        tags = "@Regression",
         glue = {"com.mobiq.test.hooks",
                 "com.mobiq.test.steps"},
         plugin = {
