@@ -18,8 +18,8 @@ public class UserManagementSteps {
     @Autowired
     private ScenarioContext context;
 
-    @When("REST request is sent to find user: {string}")
-    public void requestsToSeeAllUsersIsSent(String userName) {
+    @When("actor user with username {string} exists")
+    public void checkIfUserExists(String userName) {
         User actorUser = userManagementActions.getUserByUsername(userName);
         Assert.assertNotNull(actorUser);
         Assert.assertEquals("User: " + userName + " found", actorUser.getUsername(), userName);
