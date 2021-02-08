@@ -1,8 +1,5 @@
 language: java
 
-script:
-  - ./gradlew check
-  - ./gradlew cucumber || echo "done"
 before_deploy:
   - cp build/reports/cucumber/cucumber-html-reports/overview-features.html build/reports/cucumber/cucumber-html-reports/index.html
 deploy:
