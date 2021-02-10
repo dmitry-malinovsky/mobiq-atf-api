@@ -13,6 +13,6 @@ import org.junit.runner.RunWith;
                 "com.mobiq.test.steps"},
         plugin = {
                 "json:target/cucumber.json", "pretty",
-                "html:target/cucumber-reports"})
+                "de.monochromata.cucumber.report.PrettyReports:target/pretty-cucumber"})
 public class RunCucumberTest {
 }

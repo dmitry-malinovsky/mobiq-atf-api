@@ -17,7 +17,7 @@ The main layers of framework are:
 - service layers located in .service  - are targeted to act as a layer of abstraction between abovementioned layers and highlevel-technical functionality of the framework
 
 ###Reporting
-- after each run, a test report is generated under .target/cucumber-reports/ 
+- after each run, a test report is generated under target/pretty-cucumber
 - report format is standard cucumber report, that can be adjusted by using existing cucumber templates
 
 ###Configuration:
