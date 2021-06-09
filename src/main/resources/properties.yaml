@@ -1,0 +1,8 @@
+config:
+  api:
+    backoffice:
+      api:
+        authentication:
+          enableTokenAuthentication: false
+           defaultAlgorithm: ES256
+           defaultTokenType: JWT
